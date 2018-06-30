@@ -6,7 +6,7 @@ var output;
 var firstInput;
 var secondInput;
 
-var input = prompt("Type 1 for Basic Calculator or 2 for Advanced Calculator");
+var input = prompt("Type 1 for Basic Calculator, 2 for Advanced Calculator, 3 for BMI calculation");
 
 switch(input) {
         case '1':
@@ -62,6 +62,27 @@ switch(input) {
                   }
             break;
 
-        default:
-        output = alert("Please enter a value that is suggested on the prompt");
+            case "3":
+            text = prompt("You have selected BMI: Type 1 for Imperial or 2 for Metric");
+
+            switch (text) {
+                    case '1':
+                        firstInput = prompt("You have selected Imperial: Enter your Height in Inches");
+                        secondInput = prompt("Enter your Weight in Pounds")
+                        output = alert((parseInt(secondInput) / (parseInt(firstInput) * parseInt(firstInput))) * 703);
+                        break;
+
+                    case '2':
+                        firstInput = prompt("You have selected Metric: Enter your Height in Metres");
+                        secondInput = prompt("Enter your Weight in Kilograms")
+                    output = alert((parseFloat(secondInput) / (parseFloat(firstInput) * parseFloat(firstInput))));
+                    break;
+
+                    default:
+                        input = alert("Please enter a value that is suggested on the prompt");
+                      }
+          break;
+
+          default:
+          output = alert("Please enter a value that is suggested on the prompt");
     }
