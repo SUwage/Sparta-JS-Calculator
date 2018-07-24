@@ -1,4 +1,3 @@
-
 var input;
 var text;
 var output;
